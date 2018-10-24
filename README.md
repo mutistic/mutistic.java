@@ -11,12 +11,12 @@
 
 ---
 ### <a id="a_catalogue">目录</a>：
-1. <a href="#a_java8">Spring Boot概述</a>
+1. <a href="#a_java8">Java 8概述</a>
 98. <a href="#a_ea">ea</a>
 99. <a href="#a_down">down</a>
 
 ---
-### <a id="a_java8">一、Java 8：</a> <a href="#a_top">last</a> <a href="#a_info">next</a>
+### <a id="a_java8">一、Java 8概述：</a> <a href="#a_top">last</a> <a href="#a_info">next</a>
 1、Java 8 是什么：
 ```
   Java 8，又称为 jdk 1.8 是Java语言开发的一个主要版本。
