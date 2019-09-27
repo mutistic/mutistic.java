@@ -9,8 +9,8 @@ import java.io.File;
 public class MoveFile {
 
   public static void main(String[] args) {
-    String directoryPath = "C:\\document\\baidu\\Java并发编程";
-    String prefix = "Java并发编程";
+    String directoryPath = "C:\\document\\baidu\\Java数据结构";
+    String prefix = "Java数据结构";
     renFileName(directoryPath, prefix);
   }
 
@@ -31,7 +31,7 @@ public class MoveFile {
     // 文件名新目录
     String newFilePath = null;
     // 获取目录下的所有文件
-    int i = 44;
+    int i = 1;
     for (File file : directoryFile.listFiles()) {
       // 只循环一次
 //      if (file.isDirectory()) {
@@ -49,21 +49,13 @@ public class MoveFile {
 
   public static void renFileName(File file, String directoryPath, String prefixName) {
     // 判断是否是mp4格式文件
-    if (! (file.getName().contains(".mp4") || file.getName().contains(".mkv"))) {
+    if (!(file.getName().contains(".mp4") || file.getName().contains(".mkv")
+        || file.getName().contains(".avi"))) {
       return;
     }
-//    if(file.getName().substring())
-
     // renameTo 重命名
     String name = file.getName();
-    name = name.replace("并发-", "");
-    if(name.contains(" ")){
-      name = name.replace(name.substring(0, name.indexOf(" ")+1), "");
-    }
-//    if(name.contains("-")){
-//      name = name.replace(name.substring(0, name.indexOf("-")+1), "");
-//    }
-    name = name.replace(" ", "");
+    name = name.replaceAll(" ", "");
     file.renameTo(new File(directoryPath + "\\" + prefixName + "_" + name));
     System.out.println(directoryPath + "\\" + prefixName + "_" + name);
   }
