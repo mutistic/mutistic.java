@@ -13,6 +13,6 @@ import java.lang.annotation.Target;
  */
 @Target({ElementType.TYPE, ElementType.METHOD}) // 可以声明在类、方法上
 @Retention(RetentionPolicy.SOURCE) // 不编译
-public @interface ThreadUnSafe {
+public @interface NotThreadSafe {
 
 }

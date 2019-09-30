@@ -1,6 +1,6 @@
 package com.mutistic.basic.chap01.unsafe;
 
-import com.mutistic.annotation.ThreadUnSafe;
+import com.mutistic.annotation.NotThreadSafe;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
@@ -8,12 +8,12 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 示例01-并发执行计数功能：count++实现
- *
+ * <p> result: ++或操作成员变量是线程不安全的
  * @author mutistic
  * @version 1.0 2019/9/27
  */
 @Slf4j
-@ThreadUnSafe
+@NotThreadSafe
 public class CountExample {
 
   /**
@@ -65,8 +65,9 @@ public class CountExample {
   /**
    * count++操作
    */
-  @ThreadUnSafe
+  @NotThreadSafe
   private static void add() {
     count++;
   }
+
 }
